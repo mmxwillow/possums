@@ -125,3 +125,34 @@ h3{
 .bigger-text{
     font-size: 22px;
 }
+
+body {
+    color: #222;
+    background: #fff;
+  }
+  body.dark-theme {
+    color: #eee;
+    background: #121212;
+  }
+  
+  a {
+    color: #0033cc;
+  }
+  body.dark-theme a {
+    color: #809fff;
+  }
+  body.dark-theme header{
+      background: #212529;
+  }
+  body.dark-theme .menu{
+    background: #212529;
+  }
+  body.dark-theme article{
+    color: #eee;
+}
+body.dark-theme footer{
+    background: #1c1f22;
+}
+body.dark-theme #date{
+    color:rosybrown;
+}

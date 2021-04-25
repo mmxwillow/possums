@@ -24,8 +24,31 @@ function changePhoto(i) {
     }
 }
 
-
-function biggerText() {
+const btn1 = document.querySelector(".txt-size");
+btn1.addEventListener('click', function(){
     var article = document.getElementsByTagName("article");
     article[0].classList.toggle("bigger-text");
+})
+
+
+const btn2 = document.querySelector(".dark-mode");
+
+const currentTheme = localStorage.getItem("theme");
+if (currentTheme == "dark") {
+  document.body.classList.add("dark-theme");
+  btn2.innerText="light_mode";
 }
+
+btn2.addEventListener("click", function () {
+  document.body.classList.toggle("dark-theme");
+
+  let theme = "light";
+  btn2.innerText="dark_mode";
+  if (document.body.classList.contains("dark-theme")) {
+    theme = "dark";
+    btn2.innerText="light_mode";
+  }
+  
+  localStorage.setItem("theme", theme);
+});
+
